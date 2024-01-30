@@ -1,0 +1,40 @@
+# Node.js
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Logs
+logs
+*.log
+
+# Build files
+build/
+dist/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Next.js Image Cache
+.image/
+
+# Test coverage
+coverage/
+
+# Custom folder (change to your custom folder name)
+custom-folder/
