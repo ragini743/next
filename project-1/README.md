@@ -47,3 +47,66 @@ In client side rendering , the server sends a minimal HTML page to the client, a
 we can use event inside client side rendering because in CSR the code is execute inside browser.
 so we need to add "use client" at top of the component.
 it means we are render over component on client side .
+
+### how to call a function inside component?
+we can call a function inside next.js like as react .
+```
+export const About = () => {
+  function call() {
+    alert("ram");
+  }
+  return <div onclick={call}>hello</div>;
+};
+```
+### how to make a component inside a component ?
+we can make a component inside Next.js like as React js.
+```
+const Data = () => {
+  return (
+    <div>
+      <p>good day ! </p>
+    </div>
+  );
+};
+export const About = () => {
+  return (
+    <div>
+      <div>hello</div>
+      <Data />
+    </div>
+  );
+};
+```
+### what is difference between <Component /> and {Compoent()} ?
+<Component /> : It is often used when rendering components without any specific logic or data manipulation. it is standard JSX syntax for rendering a React component.
+```
+import AnotherComponent from './AnotherComponent';
+
+const MyComponent = () => {
+  return (
+    <div>
+      <h1>Hello from MyComponent</h1>
+      <AnotherComponent />
+    </div>
+  );
+};
+```
+
+{Component()} : It can be useful when you need to conditionally render a component or when you want to pass dynamic data to the component. in this we can include JavaScript expressions and logic within the curly braces.
+```
+import AnotherComponent from './AnotherComponent';
+
+const MyComponent = () => {
+  const condition = true;
+
+  return (
+    <div>
+      <h1>Hello from MyComponent</h1>
+      {condition ? <AnotherComponent /> : null}
+    </div>
+  );
+};
+
+export default MyComponent;
+
+```
