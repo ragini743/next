@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+# today what I have learned
+### what is server side and client side rendering ?
+in server side rendering server generates html  for each page request  and send html to the client. server execute react code and send the resulting code to the client .to use server side rendering for a page we just export async function ,called getServerSideProps .
+In client side rendering , the server sends a minimal HTML page to the client, and the browser then downloads and executes JavaScript to render the content.
+### how to add event in next.js ?
+we use event inside client side rendering because in CSR the code is execute inside browser.
+so we need to add "use client" at top of the component.
