@@ -1,5 +1,3 @@
-import React from 'react'
-
 const page = () => {
   return (
     <div>
@@ -8,6 +6,7 @@ const page = () => {
 
         </h1>
         <h1>I am from UP .</h1>
+        <button> Got to form</button>
     </div>
   )
 }
