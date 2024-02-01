@@ -1,9 +1,10 @@
 "use client"
 import { useRouter } from "next/navigation" ;
 import Link from "next/link" ;
+// import { useRouter } from "next/router";
 
 const page = () => {
-  const router =useRouter()
+  const router = useRouter()
   return (
     <div className="pt-10 pl-10">
         <h1>
@@ -11,9 +12,11 @@ const page = () => {
 
         </h1>
         <h1>I am from UP .</h1>
-        <button onClick={() => {router.push("/form")}}> Go to form</button>
+        <button onClick={() => {router.push("/about/form")}} className="border-gray-500 border-2 px-2 py-1 mt-10"> Go to form</button>
          
-        <Link href="/"> go to home page</Link>
+         <div className="mt-10 ">
+         <Link href="/" className="border-b-2 border-blue-600 text-black font-bold hover:text-blue-900"> Go to home page</Link>
+         </div>
     </div>
   )
 }

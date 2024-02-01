@@ -11,8 +11,13 @@ export default function Home() {
       >
         <button className="border-2 bg-gray-50 px-2 py-2">click me</button>
       </div>
-      <Link href="/about" className="pt-10">Got to about page</Link>
-      <Link href="/contact" className="pt-10">Got to contact page</Link>
+      <div className="pt-12">
+      <Link href="/about" className="border-b-2 border-blue-600 text-black font-bold hover:text-blue-900">Got to about page</Link>
+      </div>
+      <div className="pt-12">
+      <Link href="/contact" className="border-b-2 border-blue-600 text-black font-bold hover:text-blue-900">Got to contact page</Link>
+      </div>
+     
     </main>
   );
 }
