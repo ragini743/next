@@ -1,17 +1,26 @@
 ### What is routing in Next.js ?
-## 
-routing is a fundamental concept in web development that involves determining how a web application responds to user requests for specific URLs. 
-### how to create Routes ?
+
 ##
+
+routing is a fundamental concept in web development that involves determining how a web application responds to user requests for specific URLs.
+
+### how to create Routes ?
+
+##
+
 the folder name will match the route name and page.js will should be present in every folder.
+
 ```bash
 suppose we want ot create a route like localhost:3000/about
 then first we want to create a about folder and inside about folder we should to create a page.js file .
 ```
 
 ### what is the pattern for creating page in Next.js ?
+
 ##
+
 Inside your Next.js project, create a folder named "pages" in the root directory.
+
 ```bash
 - pages
   - index.js       // Represents the "/" route
@@ -19,12 +28,18 @@ Inside your Next.js project, create a folder named "pages" in the root directory
   - contact.js     // Represents the "/contact" route
 ```
 
-### Do we need to install any package  for routing in Nex.js ?
+### Do we need to install any package for routing in Nex.js ?
+
 ##
+
 Next.js uses file system based router . so we don't need to install any packages .
+
 ### What is Linking and navigation ?
+
 ##
+
 #### Linking :
+
 Linking is the process of creating hyperlinks or anchor tags (<a> tags) that connect different pages or resources on the web.
 and in Next.js <Link> component is used for creating links between pages within a Next.js application. It provides a way to create client-side navigation links, enhancing the user experience by preventing full page reloads.
 
@@ -48,10 +63,13 @@ export default function Home() {
   );
 }
 ```
+
 ##
+
 #### Navigation :
+
 Navigation is the act of moving from one page or location to another within a web application. It involves the user interacting with links, buttons, or other elements to go from one part of the application to another.
-in Next.js it specially  refers to the process of moving between pages within a Next.js application. This can be done using the <Link> component for declarative navigation or programmatically using the useRouter hook.
+in Next.js it specially refers to the process of moving between pages within a Next.js application. This can be done using the <Link> component for declarative navigation or programmatically using the useRouter hook.
 
 ```bash
 "use client"
@@ -69,7 +87,7 @@ const page = () => {
         </h1>
         <h1>I am from UP .</h1>
         <button onClick={() => {router.push("/about/form")}} className="border-gray-500 border-2 px-2 py-1 mt-10"> Go to form</button>
-         
+
          <div className="mt-10 ">
          <Link href="/" className="border-b-2 border-blue-600 text-black font-bold hover:text-blue-900"> Go to home page</Link>
          </div>
@@ -82,8 +100,11 @@ export default page
 ```
 
 ### How to make Links ?
+
 ##
-In Next.js, we can use the Link component from the next/link module to create links between pages in your application. 
+
+In Next.js, we can use the Link component from the next/link module to create links between pages in your application.
+
 ```bash
 / Example: pages/index.js
 import Link from 'next/link';
@@ -105,10 +126,16 @@ const HomePage = () => {
 export default HomePage;
 ```
 
+### How to make Navigation BetWeen Nested pages ?
+
+##
+
 ### what is Nested Routing ?
+
 ##
+
 ### How to make Nested Routing ?
+
 ##
-### How to make Navigation BetWeen Nessted pages ?
-##
+
 ### what is pattern for nested Routing ?

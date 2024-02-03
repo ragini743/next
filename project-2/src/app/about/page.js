@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation" ;
 import Link from "next/link" ;
 import React from "react";
-// import { useRouter } from "next/router";
 
 const page = () => {
   const router = useRouter()
