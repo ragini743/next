@@ -43,6 +43,7 @@ Next.js uses file system based router . so we don't need to install any packages
 Linking is the process of creating hyperlinks or anchor tags (<a> tags) that connect different pages or resources on the web.
 and in Next.js <Link> component is used for creating links between pages within a Next.js application. It provides a way to create client-side navigation links, enhancing the user experience by preventing full page reloads.
 
+
 ```bash
 "use client";
 import Link from "next/link";
@@ -125,14 +126,43 @@ const HomePage = () => {
 
 export default HomePage;
 ```
-
 ### How to make Navigation BetWeen Nested pages ?
 
 ##
+```bash
+"use client"
+import { useRouter } from "next/navigation" ;
+import Link from "next/link" ;
+import React from "react";
+
+const page = () => {
+  const router = useRouter()
+  return (
+    <div className="pt-10 pl-10">
+        <h1>
+            hello I am Raginee Vishwakarma
+
+        </h1>
+        <h1>I am from UP .</h1>
+        <button onClick={() => {router.push("/about/form")}} className="border-gray-500 border-2 px-2 py-1 mt-10"> Go to form</button>
+         
+         <div className="mt-10 ">
+         <Link href="/" className="border-b-2 border-blue-600 text-black font-bold hover:text-blue-900"> Go to home page</Link>
+         </div>
+    </div>
+  )
+}
+
+export default page
+```
+
 
 ### what is Nested Routing ?
 
 ##
+
+Nested routing in Next.js refers to the concept of organizing your application's routes in a hierarchical structure.
+
 
 ### How to make Nested Routing ?
 

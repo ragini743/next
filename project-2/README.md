@@ -54,4 +54,71 @@ note
 root layout is layout
 at the top level of the app directory and applies to all routes. This layout enables you to modify the initial HTML returned from the server.
 
+### what is conditional Layout ?
+##
+when there is a condition to render a layout over each child root is known as conditional layout . 
 
+### Get Route name ny Hook ?
+## 
+To get Route name we can use "usePathname" Hook .
+
+
+### how to apply condition with route name ?
+##
+```bash
+"use client"
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+const inter = Inter({ subsets: ["latin"] });
+
+
+export default function RootLayout({ children }) {
+  const pathName= usePathname()
+  console.log(pathName)
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+      <h1 className="pl-20 pt-10">it is render inside every child root
+            </h1>
+           {
+            pathName!=="/about/form" ?
+           
+            <ul className="flex justify-evenly md: w-[50%] text-blue-800 font-bold text-lg pt-5">
+              <li> <Link href='/about'> About</Link> </li>
+              <li><Link href="/contact"> contact</Link> </li>
+              <li> <Link href='/about/form'> Form</Link> </li>
+                       
+            </ul>:<div className="py-4 text-red-700 font-bold">due to conditional layout navItems are not showing on this route"/about/form"</div>
+           }
+        {children}
+      </body>
+    </html>
+  );
+}
+
+```
+### what is usePath ?
+##
+usePathname is a Client Component hook that help  you to read the current URL's pathname.
+```bash
+'use client'
+ 
+import { usePathname } from 'next/navigation'
+export default function RootLayout({ children }) {
+  const pathName= usePathname()
+
+  return <p>Current pathname: {pathname}</p>
+}
+```
+
+### what is Dynamic Routes ?
+##
+### make a folder and file for the Dynamic route ?
+##
+### Write code and navigation ?
+##
+### How to get Dynamic route name ?
+##
+ 

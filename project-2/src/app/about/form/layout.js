@@ -4,8 +4,10 @@ const layout = ({children}) => {
   return (
     <div className=''>
         <p>I am form layout
-            {children}
+            
         </p>
+    {children}
+
     </div>
   )
 }
