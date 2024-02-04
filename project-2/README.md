@@ -115,6 +115,11 @@ export default function RootLayout({ children }) {
 
 ### what is Dynamic Routes ?
 ##
+To create a Dynamic route we should create folder inside [] bracket .
+```bash
+
+```
+
 ### make a folder and file for the Dynamic route ?
 ##
 ### Write code and navigation ?
