@@ -169,3 +169,10 @@ Nested routing in Next.js refers to the concept of organizing your application's
 ##
 
 ### what is pattern for nested Routing ?
+##
+### how to create Error page in next.js ?
+##
+
+### what is 4o4 page  ?and how to create ?
+##
+The not-found file is used to render UI when the the page is not found . and we are trying to access .

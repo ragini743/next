@@ -122,8 +122,86 @@ To create a Dynamic route we should create folder inside [] bracket .
 
 ### make a folder and file for the Dynamic route ?
 ##
+```bash
+-app(root)
+--page.js
+--studentList
+--- page.js
+--- [student]
+---- page.js
+```
+file path :localhost:3000/studentList/dynamic-path
+
+app is a root path and inside app we have page.js (which is render at localhost) and studentList folder .studenList folder have page.js (which is render on path localhost:3000/studentList) and[sudent] folder . [student] folder is dynamic and has page.js which is render on path "localhost:3000/studentList/"
+
 ### Write code and navigation ?
 ##
+
 ### How to get Dynamic route name ?
 ##
+```bash
+import Link from "next/link";
+
+const array =[
+    {
+        name:"Ram",
+        id:"1",
+    },
+    {
+        name:"Shyam",
+        id:"2",
+    },
+    {
+        name:"Krishna",
+        id:"3",
+    },
+    {
+        name:"Radha",
+        id:'4',
+    },
+]
+
+const page = () => {
+  return (
+    <div className="font-bold text-lg pl-10 pt-5 ">
+       <h1> STUDENT LIST</h1>
+       <ul>
+        {array.map((data)=>{return (
+            
+            <li className="hover:text-blue-700"> <Link key={data.id} href={"/studentList/"+data.name}> {data.name} </Link> </li>
+            
+        )})}
+      
+       </ul>
+    </div>
+  )
+}
+
+export default page ;
+```
  
+### what is the segments of the route ?
+##
+[...folder name] is known as catch all segment.
+
+[folder name] is known as segment
+### how to get all segments of route ?
+##
+first make your component client side component using "use client" and then we use "useParams()" hook which is return an object with the current route's filled in dynamic parameter .
+useParams does not take any value.
+
+[...folder name] is known as catch all segment.
+
+[folder name] is known as segment
+```bash
+suppose we are a file path like app/about/[...name]/page.js
+this is render on localhost like localhost 3000/about/name
+if we pass multiple route after about then it will return a params {about:["name]}
+
+
+
+
+```
+### how to get route name from url ?
+##
+ using "useParams()" hook which is return an object with the current route's filled in dynamic parameter .
