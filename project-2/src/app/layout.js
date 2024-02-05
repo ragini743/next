@@ -4,9 +4,12 @@ import "./globals.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 const inter = Inter({ subsets: ["latin"] });
+import { useRouter } from "next/navigation";
 
 export default function RootLayout({ children }) {
   const pathName = usePathname();
+  const router= useRouter()
+  // console.log("router",router)
   console.log(pathName);
   return (
     <html lang="en">
@@ -15,6 +18,7 @@ export default function RootLayout({ children }) {
         </h1>
         <h2 className="text-green-700 font-bold ml-10 text-lg">for a Dynamic Route go to 
         <Link href="/studentList" className="text-blue-700 pl-4">  studentList</Link> </h2>
+        
 
         {pathName !== "/about/form" ? (
           <ul className="flex justify-evenly md: w-[50%] text-blue-800 font-bold text-lg pt-5">
