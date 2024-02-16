@@ -25,15 +25,15 @@ console.log(Object.keys(params).length)
            {pathName !== "/about/form" ? (
            <ul className="flex justify-evenly md: w-[50%] text-blue-800 font-bold text-lg pt-5">
             <li>
-              {" "}
-              <Link href="/about"> About</Link>{" "}
+             
+              <Link href="/about"> About</Link>
             </li>
             <li>
-              <Link href="/contact"> contact</Link>{" "}
+              <Link href="/contact"> contact</Link>
             </li>
             <li>
-              {" "}
-              <Link href="/about/form"> Form</Link>{" "}
+             
+              <Link href="/about/form"> Form</Link>
             </li>
           </ul>
            ) : (
