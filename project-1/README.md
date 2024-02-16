@@ -82,9 +82,9 @@ export const About = () => {
 };
 
 ```
-### what is difference between <Component /> and {Compoent()} ?
+### what is difference between (<Component />) and {Compoent()} ?
 ##
-<Component /> : It is often used when rendering components without any specific logic or data manipulation. it is standard JSX syntax for rendering a React component.
+(<Component />) : It is often used when rendering components without any specific logic or data manipulation. it is standard JSX syntax for rendering a React component.
 ```bash
 import AnotherComponent from './AnotherComponent';
 
@@ -133,7 +133,7 @@ web client is a part of application that runs in the user's web browser. it  man
 ### type of components in next.js?
 ## 
 there are two type of component of next.js  
-#### server component and client component .
+### server component and client component .
 
 ### what is server component ?
 ##
